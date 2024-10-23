@@ -1,5 +1,5 @@
 let timer;
-let timeRemaining = 1800; // 30 minutes in seconds
+let timeRemaining = 18; // 30 minutes in seconds
 
 function startGame() {
     document.getElementById("landingPage").style.display = "none";
@@ -15,10 +15,10 @@ function startTimer() {
         if (seconds < 10) seconds = "0" + seconds;
         document.getElementById("timer").innerText = minutes + ":" + seconds;
         
-        if (timeRemaining <= 0) {
-            clearInterval(timer);
-            showFailure();
-        }
+        //if (timeRemaining <= 0) {
+        //    clearInterval(timer);
+        //    showFailure();
+        //}
     }, 1000);
 }
 
