@@ -1,5 +1,6 @@
 let timer;
-let timeRemaining = 18; // 30 minutes in seconds
+//let timeRemaining = 1800; // 30 minutes in seconds
+let timeRemaining = 18; // 18 seconds for testing
 
 function startGame() {
     document.getElementById("landingPage").style.display = "none";
