@@ -18,7 +18,7 @@ function startTimer() {
         if (timeRemaining <= 0) {
             //clearInterval(timer);
             //showFailure();
-            alert("Times up!");
+            
         }
     }, 1000);
 }
