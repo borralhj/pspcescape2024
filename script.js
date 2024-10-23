@@ -81,4 +81,11 @@ function resetGame() {
     document.getElementById("failurePage").style.display = "none";
     document.getElementById("successPage").style.display = "none";
     document.getElementById("landingPage").style.display = "block";
+
+    document.getElementById("puzzle1Input").value = "";
+    document.getElementById("chemical1").value = "red";
+    document.getElementById("chemical2").value = "red";
+    document.getElementById("chemical3").value = "red";
+    document.getElementById("puzzle3Input").value = "";
+    document.getElementById("puzzle4Input").value = "";
 }
