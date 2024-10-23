@@ -14,12 +14,12 @@ function startTimer() {
         let minutes = Math.floor(timeRemaining / 60);
         let seconds = timeRemaining % 60;
         if (seconds < 10) seconds = "0" + seconds;
-        document.getElementById("timer").innerText = minutes + ":" + seconds;
-        
-        if (timeRemaining <= 0) {
+
+        if (timeRemaining >= 0) {
+            document.getElementById("timer").innerText = minutes + ":" + seconds;
+        } else { // timeRemaining < 0
             //clearInterval(timer);
             //showFailure();
-            
         }
     }, 1000);
 }
