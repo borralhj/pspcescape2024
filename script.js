@@ -16,8 +16,9 @@ function startTimer() {
         document.getElementById("timer").innerText = minutes + ":" + seconds;
         
         if (timeRemaining <= 0) {
-            clearInterval(timer);
-            showFailure();
+            //clearInterval(timer);
+            //showFailure();
+            alert("Times up!");
         }
     }, 1000);
 }
