@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape from the Time Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="landingPage" class="page">
+            <h1>Escape from the Time Lab</h1>
+            <p>You have 30 minutes to solve a series of puzzles and escape. Pay close attention to the details.</p>
+            <button onclick="startGame()">Start Escape Room</button>
+        </div>
+
+        <div id="puzzle1" class="page" style="display:none;">
+            <h2>Puzzle 1: The Lockbox</h2>
+            <p>To unlock the box, figure out the year the first time travel theory was introduced by a famous scientist.</p>
+            <input type="text" id="puzzle1Input" placeholder="Enter 3-digit code">
+            <button onclick="checkPuzzle1()">Submit</button>
+        </div>
+
+        <div id="puzzle2" class="page" style="display:none;">
+            <h2>Puzzle 2: The Chemical Mixture</h2>
+            <p>Combine the chemicals in the correct order.</p>
+            <select id="chemical1">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+            </select>
+            <select id="chemical2">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+            </select>
+            <select id="chemical3">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+            </select>
+            <button onclick="checkPuzzle2()">Submit</button>
+        </div>
+
+        <div id="puzzle3" class="page" style="display:none;">
+            <h2>Puzzle 3: The Broken Clock</h2>
+            <p>The clock is frozen in time. What is the correct time?</p>
+            <input type="text" id="puzzle3Input" placeholder="Enter time (HH:MM)">
+            <button onclick="checkPuzzle3()">Submit</button>
+        </div>
+
+        <div id="puzzle4" class="page" style="display:none;">
+            <h2>Puzzle 4: The Final Door</h2>
+            <p>The answer to everything is hidden in history. Enter the 5-letter code.</p>
+            <input type="text" id="puzzle4Input" placeholder="Enter 5-letter code">
+            <button onclick="checkPuzzle4()">Submit</button>
+        </div>
+
+        <div id="successPage" class="page" style="display:none;">
+            <h2>Congratulations!</h2>
+            <p>You've successfully escaped the Time Lab!</p>
+            <button onclick="resetGame()">Play Again</button>
+        </div>
+
+        <div id="failurePage" class="page" style="display:none;">
+            <h2>Time's Up!</h2>
+            <p>You are stuck in a time loop.</p>
+            <button onclick="resetGame()">Try Again</button>
+        </div>
+        
+        <div id="timer">30:00</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
