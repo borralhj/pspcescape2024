@@ -15,10 +15,10 @@ function startTimer() {
         if (seconds < 10) seconds = "0" + seconds;
         document.getElementById("timer").innerText = minutes + ":" + seconds;
         
-        //if (timeRemaining <= 0) {
-        //    clearInterval(timer);
-        //    showFailure();
-        //}
+        if (timeRemaining <= 0) {
+            clearInterval(timer);
+            showFailure();
+        }
     }, 1000);
 }
 
