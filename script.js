@@ -1,6 +1,7 @@
 let timer;
-//let timeRemaining = 1800; // 30 minutes in seconds
-let timeRemaining = 18; // 18 seconds for testing
+let currentTime = 0;
+//const MAX_TIME = 1800; // 30 minutes in seconds
+const MAX_TIME = 18; // 18 seconds for testing
 
 function startGame() {
     document.getElementById("landingPage").style.display = "none";
@@ -10,13 +11,13 @@ function startGame() {
 
 function startTimer() {
     timer = setInterval(function() {
-        timeRemaining--;
-        let minutes = Math.floor(timeRemaining / 60);
-        let seconds = timeRemaining % 60;
-        if (seconds < 10) seconds = "0" + seconds;
+        currentTime++;
+
+        let timeRemaining = MAX_TIME - currentTime;
+        const timeString = getTimeString(timeRemaining);
 
         if (timeRemaining >= 0) {
-            document.getElementById("timer").innerText = minutes + ":" + seconds;
+            document.getElementById("timer").innerText = timeString;
         } else { // timeRemaining < 0
             //clearInterval(timer);
             //showFailure();
@@ -62,9 +63,25 @@ function checkPuzzle4() {
         clearInterval(timer);
         document.getElementById("puzzle4").style.display = "none";
         document.getElementById("successPage").style.display = "block";
+        displayFinalTime();
     } else {
         alert("Incorrect! Try again.");
     }
+}
+
+function getTimeString(timeInSeconds) {
+    let minutes = Math.floor(timeInSeconds / 60);
+    let seconds = timeInSeconds % 60;
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+
+    return `${minutes}:${seconds}`;
+}
+
+function displayFinalTime() {
+    const timeString = getTimeString(currentTime);
+    document.getElementById("finalTime").innerHTML = timeString;
 }
 
 function showFailure() {
@@ -76,8 +93,8 @@ function showFailure() {
 }
 
 function resetGame() {
-    timeRemaining = 1800;
-    document.getElementById("timer").innerText = "30:00";
+    currentTime = 0;
+    document.getElementById("timer").innerText = getTimeString(MAX_TIME)
     document.getElementById("failurePage").style.display = "none";
     document.getElementById("successPage").style.display = "none";
     document.getElementById("landingPage").style.display = "block";
@@ -89,3 +106,7 @@ function resetGame() {
     document.getElementById("puzzle3Input").value = "";
     document.getElementById("puzzle4Input").value = "";
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("timer").innerHTML = getTimeString(MAX_TIME);
+});
