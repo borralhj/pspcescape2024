@@ -2,6 +2,7 @@ let timer;
 let currentTime = 0;
 //const MAX_TIME = 1800; // 30 minutes in seconds
 const MAX_TIME = 18; // 18 seconds for testing
+const PENALTY = 5; // seconds penalty for wrong guess
 
 function startGame() {
     document.getElementById("landingPage").style.display = "none";
@@ -19,6 +20,8 @@ function startTimer() {
         if (timeRemaining >= 0) {
             document.getElementById("timer").innerText = timeString;
         } else { // timeRemaining < 0
+            document.getElementById("timer").innerText = getTimeString(0);
+
             //clearInterval(timer);
             //showFailure();
         }
@@ -31,7 +34,8 @@ function checkPuzzle1() {
         document.getElementById("puzzle1").style.display = "none";
         document.getElementById("puzzle2").style.display = "block";
     } else {
-        alert("Incorrect! Try again.");
+        alert(`Incorrect! Try again. ${PENALTY} second penalty`);
+        currentTime += PENALTY;
     }
 }
 
@@ -43,7 +47,8 @@ function checkPuzzle2() {
         document.getElementById("puzzle2").style.display = "none";
         document.getElementById("puzzle3").style.display = "block";
     } else {
-        alert("Incorrect! Try again.");
+        alert(`Incorrect! Try again. ${PENALTY} second penalty`);
+        currentTime += PENALTY;
     }
 }
 
@@ -53,7 +58,8 @@ function checkPuzzle3() {
         document.getElementById("puzzle3").style.display = "none";
         document.getElementById("puzzle4").style.display = "block";
     } else {
-        alert("Incorrect! Try again.");
+        alert(`Incorrect! Try again. ${PENALTY} second penalty`);
+        currentTime += PENALTY;
     }
 }
 
@@ -65,7 +71,8 @@ function checkPuzzle4() {
         document.getElementById("successPage").style.display = "block";
         displayFinalTime();
     } else {
-        alert("Incorrect! Try again.");
+        alert(`Incorrect! Try again. ${PENALTY} second penalty`);
+        currentTime += PENALTY;
     }
 }
 
