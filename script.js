@@ -1,7 +1,7 @@
 let timer;
 let currentTime = 0;
-//const MAX_TIME = 1800; // 30 minutes in seconds
-const MAX_TIME = 18; // 18 seconds for testing
+const MAX_TIME = 1800; // 30 minutes in seconds
+//const MAX_TIME = 18; // 18 seconds for testing
 const PENALTY = 5; // seconds penalty for wrong guess
 
 function startGame() {
