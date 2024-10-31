@@ -40,10 +40,10 @@ function checkPuzzle1() {
 }
 
 function checkPuzzle2() {
-    let chemical1 = document.getElementById("chemical1").value;
-    let chemical2 = document.getElementById("chemical2").value;
-    let chemical3 = document.getElementById("chemical3").value;
-    if (chemical1 === "1" && chemical2 === "4" && chemical3 === "2") {
+    let artifact = document.getElementById("artifact").value;
+    let location = document.getElementById("location").value;
+    let guardian = document.getElementById("guardian").value;
+    if (artifact === "1" && location === "4" && guardian === "2") {
         document.getElementById("puzzle2").style.display = "none";
         document.getElementById("puzzle3").style.display = "block";
     } else {
