@@ -43,7 +43,7 @@ function checkPuzzle2() {
     let chemical1 = document.getElementById("chemical1").value;
     let chemical2 = document.getElementById("chemical2").value;
     let chemical3 = document.getElementById("chemical3").value;
-    if (chemical1 === "yellow" && chemical2 === "red" && chemical3 === "blue") {
+    if (chemical1 === "1" && chemical2 === "4" && chemical3 === "2") {
         document.getElementById("puzzle2").style.display = "none";
         document.getElementById("puzzle3").style.display = "block";
     } else {
