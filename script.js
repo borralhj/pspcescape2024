@@ -54,7 +54,7 @@ function checkPuzzle2() {
 
 function checkPuzzle3() {
     let answer = document.getElementById("puzzle3Input").value;
-    if (answer === "12:30") {
+    if (answer === "10:30") {
         document.getElementById("puzzle3").style.display = "none";
         document.getElementById("puzzle4").style.display = "block";
     } else {
