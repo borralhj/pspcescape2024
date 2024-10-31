@@ -30,7 +30,7 @@ function startTimer() {
 
 function checkPuzzle1() {
     let answer = document.getElementById("puzzle1Input").value;
-    if (answer === "1905") {
+    if (answer === "452713") {
         document.getElementById("puzzle1").style.display = "none";
         document.getElementById("puzzle2").style.display = "block";
     } else {
