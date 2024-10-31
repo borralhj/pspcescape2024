@@ -65,7 +65,7 @@ function checkPuzzle3() {
 
 function checkPuzzle4() {
     let answer = document.getElementById("puzzle4Input").value.toUpperCase();
-    if (answer === "HAWKS") {
+    if (answer === "BRAVE") {
         clearInterval(timer);
         document.getElementById("puzzle4").style.display = "none";
         document.getElementById("successPage").style.display = "block";
