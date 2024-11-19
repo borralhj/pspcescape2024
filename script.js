@@ -116,4 +116,11 @@ function resetGame() {
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("timer").innerHTML = getTimeString(MAX_TIME);
+    document.getElementById("gamePasswordStart").oninput = () => {
+        if (document.getElementById("gamePasswordStart").value == "escape2024") {
+            document.getElementById("startButton").disabled = false;
+        } else {
+            document.getElementById("startButton").disabled = true;
+        }
+    }
 });

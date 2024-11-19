@@ -12,7 +12,8 @@
         <div id="landingPage" class="page">
             <h1>Escape from the Time Lab</h1>
             <p>You have 30 minutes to solve a series of puzzles and escape. Pay close attention to the details.</p>
-            <button onclick="startGame()">Start Escape Room</button>
+            <input id="gamePasswordStart" placeholder="Enter start password" /><br />
+            <button id="startButton" onclick="startGame()" disabled>Start Escape Room</button>
         </div>
 
         <div id="puzzle1" class="page" style="display:none;">
@@ -64,7 +65,10 @@
         <div id="successPage" class="page" style="display:none;">
             <h2>Congratulations!</h2>
             <p>You've successfully escaped the Time Lab!</p>
-            <p>Time taken:</p>
+            <div>
+                <h1 style="font-size: xx-large">🎉🎉🎉</h1>
+            </div>
+            <p>Let us know what you thought and your final time below:</p>
             <p id="finalTime"></p>
             <button onclick="resetGame()">Play Again</button>
         </div>
