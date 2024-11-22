@@ -128,6 +128,15 @@ async function getHash(text) {
     return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
 }
 
+function showPrintout() {
+    document.getElementById("finalTimePrint").innerHTML = getTimeString(currentTime);
+    document.getElementById("teamMembers").innerHTML = document.getElementById("printOutNames").value;
+
+    document.getElementById("successPage").style.display = "none";
+    document.getElementById("timer").style.display = "none";
+    document.getElementById("printOut").style.display = "block";
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("timer").innerHTML = getTimeString(MAX_TIME);
     document.getElementById("gamePasswordStart").oninput = async () => {

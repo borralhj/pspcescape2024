@@ -25,3 +25,15 @@ input, select {
     padding: 8px;
     font-size: 18px;
 }
+
+#printOut {
+    border-style: solid;
+    height: 90vh;
+    align-content: center;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@page {
+    size: landscape;
+}

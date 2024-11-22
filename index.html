@@ -63,15 +63,38 @@
         </div>
 
         <div id="successPage" class="page" style="display:none;">
-            <h2>Congratulations!</h2>
+            <h1>Congratulations!</h1>
             <p>You've successfully escaped the Time Lab!</p>
             <div>
                 <h1 style="font-size: xx-large">🎉🎉🎉</h1>
+                <p>Let us know what you thought and your final time below:</p>
+                <p id="finalTime">25:40</p>
+                <button onclick="resetGame()">Play Again</button>
             </div>
-            <p>Let us know what you thought and your final time below:</p>
-            <p id="finalTime"></p>
-            <button onclick="resetGame()">Play Again</button>
+            <br />
+            <br />
+            <div>
+                <h2>Print out a certificate and take a group photo with it!</h2>
+                <input id="printOutNames" placeholder="Enter your names here"></input>
+                <br />
+                <button onclick="showPrintout()">Show your completion certificate</button>
+                <br />
+                <br />
+                <br />
+            </div>
         </div>
+
+        <div id="printOut" class="page" style="display:none;">
+                <h1 style="font-size: xx-large">🎉🎉🎉🎉🎉🎉</h1>
+                <h1>Our team escaped the 2024 PSPC Escape Room in</h1>
+                <h2 id="finalTimePrint" style="font-weight:normal">25:40</h2>
+                <br />
+                <h1>Team members:</h1>
+                <h2 id="teamMembers" style="font-weight:normal">William, Matty, Joao, Maddy</h2>
+                <h1 style="font-size: xx-large">🎉🎉🎉🎉🎉🎉🎉</h1>
+                <button onclick="window.print()">Print</button>
+        </div>
+
 
         <div id="failurePage" class="page" style="display:none;">
             <h2>Time's Up!</h2>
